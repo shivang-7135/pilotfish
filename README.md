@@ -38,7 +38,7 @@ What that means in practice:
 
 ## Quick start (prebuilt, no Node needed)
 
-1. Download `pilotfish-extension.zip` from the [latest release](../../releases/latest) and unzip it.
+1. Download the `pilotfish-*-chrome.zip` file from the [latest release](../../releases/latest) and unzip it.
 2. Open `chrome://extensions` (or `edge://extensions`, `brave://extensions`) and turn on **Developer mode**.
 3. Click **Load unpacked** and select the unzipped folder (the one containing `manifest.json`).
 4. Pin the Pilotfish toolbar icon, open any page and click it — the side panel opens for **that tab only**.
