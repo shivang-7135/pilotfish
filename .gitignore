@@ -7,3 +7,4 @@ test-results
 tests/e2e/dates/results
 tests/e2e/dates/dist
 tests/e2e/dates/.build
+!pilotfish-extension.zip

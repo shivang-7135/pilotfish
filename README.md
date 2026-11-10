@@ -13,6 +13,22 @@ An open-source AI browser agent with **one agent per tab**. Open it on a tab, te
 
 Works in Chromium browsers with the side panel API (Chrome 116+, Edge, Brave). Where it is missing, the toolbar button opens the same UI in a small window bound to the tab.
 
+## Get started — pick your path
+
+| I just want to use it | I want to change the code |
+|---|---|
+| No coding, no tools to install. **3 steps, about 1 minute.** → [Install in 3 steps](#install-in-3-steps-no-coding) | Clone, build, hack on it and send a pull request. → [For developers](#for-developers-build-from-source) |
+
+### Install in 3 steps (no coding)
+
+1. **Download & unzip.** Click [`pilotfish-extension.zip`](pilotfish-extension.zip) → **Download** (or click the green **Code** button → **Download ZIP** and find `pilotfish-extension.zip` inside). Unzip it — you get a folder.
+2. **Add to Chrome.** Open `chrome://extensions`, switch on **Developer mode** (top right), click **Load unpacked** and pick the unzipped folder (the one with `manifest.json` in it). Works the same in Edge (`edge://extensions`) and Brave (`brave://extensions`).
+3. **Use it.** Click the puzzle-piece icon and pin **Pilotfish**. Open any page, click the icon, go to ⚙ **Settings**, choose a provider and paste your API key. Then just type what you want, e.g. *"Fill in this form from my memory"*.
+
+Tip: add your details or CV under ☰ **Memory** once, and Pilotfish reuses them on every form. It always asks before submitting, paying, sending or deleting.
+
+To update later, download the new zip, replace the folder, and click ↻ on the Pilotfish card in `chrome://extensions`.
+
 ## How Pilotfish is different
 
 Most AI browser agents fall into one of four groups. Pilotfish takes a different spot:
@@ -36,21 +52,13 @@ What that means in practice:
 - **Personal memory, locally.** Save "about me" notes and documents (e.g. your CV); the agent uses them to fill forms and reads documents only when needed.
 - **Approval gates.** Submitting, paying, sending, deleting, typing into password/card fields and leaving for an unmentioned site all wait for your OK.
 
-## Quick start (prebuilt, no Node needed)
+## For developers: build from source
 
-1. Download the `pilotfish-*-chrome.zip` file from the [latest release](../../releases/latest) and unzip it.
-2. Open `chrome://extensions` (or `edge://extensions`, `brave://extensions`) and turn on **Developer mode**.
-3. Click **Load unpacked** and select the unzipped folder (the one containing `manifest.json`).
-4. Pin the Pilotfish toolbar icon, open any page and click it — the side panel opens for **that tab only**.
-5. Click ⚙ **Settings**: choose a provider, paste your API key, pick a model that supports tool calling (e.g. a recent Claude, GPT or Gemini model via OpenRouter; for local use, Ollama with a tool-calling model).
-6. Optional: click ☰ **Memory** and add your details or upload a CV.
-7. Type a task, e.g. *"Fill in this form from my memory"*, and watch it work. Approve or reject when it asks.
-
-## Install (from source)
-
-Requires Node.js 20+.
+Requires Node.js 20+. Fork the repo first if you plan to send a pull request.
 
 ```bash
+git clone https://github.com/shivang-7135/pilotfish.git
+cd pilotfish
 npm install
 npm run build
 ```
@@ -60,6 +68,8 @@ npm run build
 3. Open a page and click the Pilotfish toolbar icon. The panel opens for that tab only.
 4. In **Settings** (⚙), pick a provider, paste your API key and choose a model that supports tool calling.
 5. In **Memory** (☰), add your details and any documents you want it to use.
+
+After changing code, run `npm run build` again (or use `npm run dev` for live reload) and click ↻ on the extension card. To refresh the prebuilt download for non-developers, run `npm run zip` and copy `.output/pilotfish-<version>-chrome.zip` over `pilotfish-extension.zip`. See [How it works](#how-it-works) for a map of the code and [Develop](#develop) for tests.
 
 ## Use
 
