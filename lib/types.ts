@@ -1,4 +1,4 @@
-export type ProviderId = 'openrouter' | 'openai' | 'anthropic' | 'custom';
+export type ProviderId = 'openrouter' | 'openai' | 'anthropic' | 'demonroute' | 'custom';
 
 export interface Settings {
   provider: ProviderId;

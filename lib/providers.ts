@@ -3,6 +3,7 @@ import type { ChatMessage, ModelReply, ProviderId, Settings, ToolCall, ToolDef }
 const OPENAI_BASE: Record<Exclude<ProviderId, 'anthropic'>, string> = {
   openrouter: 'https://openrouter.ai/api/v1',
   openai: 'https://api.openai.com/v1',
+  demonroute: 'https://api.demonroute.com/v1',
   custom: '',
 };
 const ANTHROPIC_BASE = 'https://api.anthropic.com/v1';
@@ -11,6 +12,7 @@ export const PROVIDER_LABELS: Record<ProviderId, string> = {
   openrouter: 'OpenRouter',
   openai: 'OpenAI',
   anthropic: 'Anthropic',
+  demonroute: 'Demon Route',
   custom: 'Custom (OpenAI-compatible)',
 };
 

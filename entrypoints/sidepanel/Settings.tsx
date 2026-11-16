@@ -6,6 +6,7 @@ const KEY_HELP: Record<ProviderId, string> = {
   openrouter: 'Create one at openrouter.ai/keys',
   openai: 'Create one at platform.openai.com/api-keys',
   anthropic: 'Create one at console.anthropic.com',
+  demonroute: 'Create one at demonroute.com/dashboard',
   custom: 'Optional for local servers such as Ollama',
 };
 

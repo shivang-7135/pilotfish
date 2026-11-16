@@ -2,8 +2,8 @@ import type { Memory, Settings } from './types';
 
 export const DEFAULT_SETTINGS: Settings = {
   provider: 'openrouter',
-  apiKeys: { openrouter: '', openai: '', anthropic: '', custom: '' },
-  models: { openrouter: '', openai: '', anthropic: '', custom: '' },
+  apiKeys: { openrouter: '', openai: '', anthropic: '', demonroute: '', custom: '' },
+  models: { openrouter: '', openai: '', anthropic: '', demonroute: '', custom: '' },
   customBaseUrl: 'http://localhost:11434/v1',
   confirmMode: 'risky',
   maxSteps: 30,

@@ -1,6 +1,6 @@
 # Pilotfish
 
-An open-source AI browser agent with **one agent per tab**. Open it on a tab, tell it what to do, and it reads the page, fills forms and clicks through tasks there — while a glowing frame and a spotlight show you exactly where it is working. Bring your own key (OpenRouter, OpenAI, Anthropic, or any OpenAI-compatible server such as Ollama).
+An open-source AI browser agent with **one agent per tab**. Open it on a tab, tell it what to do, and it reads the page, fills forms and clicks through tasks there — while a glowing frame and a spotlight show you exactly where it is working. Bring your own key (OpenRouter, OpenAI, Anthropic, Demon Route, or any OpenAI-compatible server such as Ollama).
 
 - **Per tab, not per window.** Each tab has its own panel, chat and agent. Start a task in one tab and carry on in another; the tab title shows ⏳ while it works and ❓ while it waits for your approval.
 - **You can see it work.** An orange frame marks the tab, and every field it touches is highlighted with a label.
@@ -38,7 +38,7 @@ Most AI browser agents fall into one of four groups. Pilotfish takes a different
 | Runs in | Vendor's VM | Their browser | A script you write | **Your existing Chrome / Edge / Brave** |
 | Your logins & cookies | Re-login in their VM | Imported/migrated | Usually a fresh profile | **Already there — it is your browser** |
 | Unit of work | One session | One window / assistant | One script | **One agent per tab, several running side by side** |
-| Model / billing | Vendor's model, subscription | Mostly vendor's choice | Any | **Any — your own key (OpenRouter, OpenAI, Anthropic, Ollama, any OpenAI-compatible)** |
+| Model / billing | Vendor's model, subscription | Mostly vendor's choice | Any | **Any — your own key (OpenRouter, OpenAI, Anthropic, Demon Route, Ollama, any OpenAI-compatible)** |
 | Where data goes | Vendor's servers | Vendor's servers (often) | Wherever you send it | **Only to the model provider you pick. No backend, no telemetry** |
 | Code | Closed | Mixed | Open | **MIT, ~3.5k lines of TypeScript you can read in an afternoon** |
 
